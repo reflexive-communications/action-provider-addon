@@ -155,30 +155,14 @@ function action_provider_addon_civicrm_themes(&$themes)
     _action_provider_addon_civix_civicrm_themes($themes);
 }
 
-// --- Functions below this ship commented out. Uncomment as required. ---
+// --- Functions below this are implemented by us. ---
 
 /**
- * Implements hook_civicrm_preProcess().
+ * Implementation of hook_civicrm_container
  *
- * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_preProcess
+ * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_container
  */
-//function action_provider_addon_civicrm_preProcess($formName, &$form) {
-//
-//}
-
-/**
- * Implements hook_civicrm_navigationMenu().
- *
- * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_navigationMenu
- */
-//function action_provider_addon_civicrm_navigationMenu(&$menu) {
-//  _action_provider_addon_civix_insert_navigation_menu($menu, 'Mailings', [
-//    'label' => E::ts('New subliminal message'),
-//    'name' => 'mailing_subliminal_message',
-//    'url' => 'civicrm/mailing/subliminal',
-//    'permission' => 'access CiviMail',
-//    'operator' => 'OR',
-//    'separator' => 0,
-//  ]);
-//  _action_provider_addon_civix_navigationMenu($menu);
-//}
+function action_provider_addon_civicrm_container($container)
+{
+    $container->addCompilerPass(new Civi\ActionProviderAddon\CompilerPass());
+}

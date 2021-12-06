@@ -1,5 +1,11 @@
 # action-provider-addon
 
+This extension provides extra actions for the action-provider extension.
+
+**Actions**
+
+- `Setup Organization And Relationship`: action for creating relationships between an organization (identified by name) and a contact (identified by contact id). The relationship could be configured.
+
 The extension is licensed under [AGPL-3.0](LICENSE.txt).
 
 ## Requirements

@@ -1,5 +1,7 @@
 # action-provider-addon
 
+[![CI](https://github.com/reflexive-communications/action-provider-addon/actions/workflows/main.yml/badge.svg)](https://github.com/reflexive-communications/action-provider-addon/actions/workflows/main.yml)
+
 This extension provides extra actions for the action-provider extension.
 
 **Actions**
